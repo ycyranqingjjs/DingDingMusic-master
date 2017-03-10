@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dingmouren.dingdingmusic">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/dingding_icon"
+        android:label="@string/app_name"
+        android:name=".MyApplication"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.splash.SplashActivity"
+            android:theme="@style/SplashActivityTheme"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.home.MainActivity"
+            android:theme="@style/MainActivityTheme"
+            android:launchMode="singleTask"
+            >
+
+        </activity>
+        <!--播放音乐的界面-->
+        <activity android:name=".ui.musicplay.PlayingActivity"
+            android:theme="@style/PlayingActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--个人中心-->
+        <activity android:name=".ui.personal.PersonalCenterActivity"
+            android:theme="@style/PersonalActivityTheme"
+            android:launchMode="singleTask"
+            />
+        <activity android:name=".ui.personal.EditActivity"
+            android:theme="@style/EditActivityTheme"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.search.SearchActivity"
+            android:theme="@style/SearchActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--本地音乐界面-->
+        <activity android:name=".ui.localmusic.LocalMusicActivity"
+            android:theme="@style/LocalMusicActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--收藏的音乐-->
+        <activity android:name=".ui.collected.CollectedActivity"
+            android:theme="@style/CollectedActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--设置界面-->
+        <activity android:name=".ui.setting.SettingActivity"
+            android:theme="@style/SettingActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--日韩歌曲-->
+        <activity android:name=".ui.jk.JKActivity"
+            android:theme="@style/JKActivityTheme"
+            android:launchMode="singleTask"
+            />
+        <!--摇滚歌曲-->
+        <activity android:name=".ui.rock.RockActivity"
+            android:theme="@style/RockActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--民谣歌曲-->
+        <activity android:name=".ui.volkslied.VolksliedActivity"
+            android:theme="@style/VolkiliedActivityTheme"
+            android:launchMode="singleTask"/>
+        <!--关于-->
+        <activity android:name=".ui.about.AboutActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AboutActivityTheme"
+            />
+        <!--锁屏-->
+        <activity android:name=".ui.lock.LockActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/LockActivityTheme"/>
+
+        <!--音乐播放核心类-->
+        <service android:name=".service.MediaPlayerService"/>
+
+        <!-- 配置bugly APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="020b9ac994" />
+        <!-- 配置bugly APP版本号 -->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="1.0.1" />
+        <!-- 配置bugly APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="github" />
+        <!-- 配置Bugly调试模式（true或者false）-->
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
+
+    </application>
+
+</manifest>

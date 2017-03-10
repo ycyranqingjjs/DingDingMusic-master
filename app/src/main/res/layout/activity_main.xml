@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.dingmouren.dingdingmusic.ui.home.MainActivity">
+
+    <include
+        android:id="@+id/main_scrollview"
+        layout="@layout/main_scrollview" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/abc_action_bar_content_inset_material"
+        android:layout_marginLeft="@dimen/abc_action_bar_content_inset_material"
+        android:src="@mipmap/icon_user"
+        app:backgroundTint="@android:color/black"
+        android:alpha="0.5"
+        app:fabSize="mini"
+        app:layout_anchor="@id/main_scrollview"
+        app:layout_anchorGravity="bottom|left" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/abc_action_bar_content_inset_material"
+        android:layout_marginRight="@dimen/abc_action_bar_content_inset_material"
+        app:backgroundTint="@android:color/black"
+        android:alpha="0.5"
+        app:fabSize="mini"
+        app:layout_anchor="@id/main_scrollview"
+        app:layout_anchorGravity="bottom|right"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="@android:color/black"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            app:hint="@string/search_bar_hint"
+            />
+
+        <ImageView
+            android:id="@+id/img_randomn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_content_item_height"
+            android:layout_below="@+id/search_bar"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/random" />
+
+        <ImageView
+            android:id="@+id/img_jk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_content_item_height"
+            android:layout_below="@+id/img_randomn"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/jk"
+            android:transitionName="share_jk"
+            />
+
+        <ImageView
+            android:id="@+id/img_rock"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_content_item_height"
+            android:layout_below="@+id/img_jk"
+            android:background="#000000"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/rock"
+            android:transitionName="share_rock"
+
+            />
+
+        <ImageView
+            android:id="@+id/img_volkslied"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_content_item_height"
+            android:layout_below="@+id/img_rock"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/volkslied"
+            android:transitionName="share_volkslied" />
+    </RelativeLayout>
+</ScrollView>
